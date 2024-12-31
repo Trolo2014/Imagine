@@ -6,6 +6,9 @@ import json
 import os
 import sys
 
+from keep_alive import keep_alive
+keep_alive()
+
 # Channel and message ID where the items list is stored
 CHANNEL_ID = 1201165202465505334
 MESSAGE_ID = 1323386764722704506
