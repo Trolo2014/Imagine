@@ -56,7 +56,7 @@ def check_ownership(user_id):
         return False
 
 # Slash command: account_seller
-@bot.tree.command(name="account_purchase", description="Start's the account selling process.")
+@bot.tree.command(name="account_purchase", description="Write Ur Roblox Username Which Is Going To Buy T Shirt")
 async def account_seller(interaction: discord.Interaction, username: str):
     global is_command_in_use
 
@@ -87,7 +87,7 @@ async def account_seller(interaction: discord.Interaction, username: str):
         value=f"[Click here to buy T-shirt]({TSHIRT_URL})"
     ).add_field(
         name="Time Left:",
-        value="5:00"
+        value="05:00"
     ).set_image(url='https://i.imgur.com/n4J7GTC.png')
     await interaction.response.send_message(embed=embed)
     message = await interaction.original_response()
