@@ -125,13 +125,13 @@ async def account_seller(interaction: discord.Interaction, username: str):
     if message_to_check:
         items_str = message_to_check.content
         try:
-            items = json.loads(items_str)["items"]  # Assuming message content is JSON-formatted
+            items = json.loads(items_str)["Product"]  # Assuming message content is JSON-formatted
         except json.JSONDecodeError:
             items = []
 
         if items:
             item = items.pop(0)  # Remove the first item from the list
-            updated_items = {"items": items}
+            updated_items = {"Product": items}
             await message_to_check.edit(content=json.dumps(updated_items))  # Update the message content with the new list
 
             await interaction.user.send(f"✅ Here's your Product: {item}")
