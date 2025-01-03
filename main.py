@@ -134,8 +134,8 @@ async def account_seller(interaction: discord.Interaction, username: str):
             updated_items = {"items": items}
             await message_to_check.edit(content=json.dumps(updated_items))  # Update the message content with the new list
 
-            await interaction.user.send(f"✅ Here's your item: {item}")
-            await interaction.followup.send("✅ T-Shirt removed, item sent via DM!")
+            await interaction.user.send(f"✅ Here's your Product: {item}")
+            await interaction.followup.send("✅ T-Shirt removed, Product sent via DM!")
 
         else:
             await interaction.followup.send("❌ No items left to send.")
